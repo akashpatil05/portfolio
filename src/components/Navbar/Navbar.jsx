@@ -22,6 +22,37 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  // Handle resume download
+const handleResumeClick = (e) => {
+  e.preventDefault();
+  
+  // Verify the path - adjust if needed
+  const resumePath = "/resume/Akash_Ajay_Patil_Resume.pdf";
+  
+  // Try fetching the file first to ensure it exists
+  fetch(resumePath)
+    .then(response => {
+      if (!response.ok) {
+        alert("Resume file not found. Please check the file path.");
+        throw new Error("File not found");
+      }
+      
+      const link = document.createElement("a");
+      link.href = resumePath;
+      link.download = "Akash_Ajay_Patil_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
+    .catch(error => {
+      console.error("Error downloading resume:", error);
+      alert("Error downloading resume. Check browser console.");
+    });
+  
+  closeMenu();
+};
+
+
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
@@ -62,15 +93,20 @@ export default function Navbar() {
             </a>
           </li>
           <li className="navbar-item">
-            <a
-              href="/resume.pdf"
+            <button
+              onClick={handleResumeClick}
               className="navbar-link navbar-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
+              aria-label="Download resume"
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: "0",
+                font: "inherit",
+              }}
             >
               Resume
-            </a>
+            </button>
           </li>
         </ul>
       </div>
