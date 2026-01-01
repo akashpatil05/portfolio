@@ -7,19 +7,19 @@ export default function Footer() {
     {
       name: "Instagram",
       icon: "fab fa-instagram",
-      url: "https://instagram.com/akash_ajay_patil", // Update with your Instagram handle
+      url: "https://instagram.com/akash_ajay_patil",
       color: "#E4405F",
     },
     {
       name: "GitHub",
       icon: "fab fa-github",
-      url: "https://github.com/akashpatil05", // Update with your GitHub
+      url: "https://github.com/akashpatil05",
       color: "#000000ff",
     },
     {
       name: "LinkedIn",
       icon: "fab fa-linkedin",
-      url: "https://www.linkedin.com/in/akash-patil-b1119a32a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Update with your LinkedIn
+      url: "https://www.linkedin.com/in/akash-patil-b1119a32a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       color: "#0A66C2",
     },
   ];
@@ -27,7 +27,7 @@ export default function Footer() {
   const contactInfo = [
     {
       type: "Email",
-      value: "akash@example.com",
+      value: "akash.apatil05@gmail.com",
       icon: "fas fa-envelope",
       link: "mailto:akash.apatil05@gmail.com",
     },
@@ -63,7 +63,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="footer-container">
         <motion.div
           className="footer-content"

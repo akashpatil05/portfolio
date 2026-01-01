@@ -72,6 +72,17 @@ export default function Hero() {
     },
   };
 
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <motion.section
       className="hero"
@@ -117,7 +128,7 @@ export default function Hero() {
           <a href="#projects" className="btn btn-primary">
             View My Projects
           </a>
-          <a href="#contact" className="btn btn-secondary">
+          <a href="#contact" className="btn btn-secondary" onClick={scrollToContact}>
             Get In Touch
           </a>
         </motion.div>

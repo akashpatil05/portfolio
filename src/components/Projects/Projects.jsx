@@ -15,7 +15,6 @@ export default function Projects() {
       details: "A comprehensive sports venue booking platform with real-time updates, user profiles, and seamless booking experience.",
       tech: ["React", "MongoDB", "Responsive Design", "Cloudinary"],
       link: "https://grooviti.com",
-      github: "https://github.com/Aditya25-github/grooviti.git"
     },
     {
       name: "TEDxPCCOER",
@@ -29,7 +28,6 @@ export default function Projects() {
       details: "An engaging event website showcasing speakers, sessions, and event details with smooth animations and responsive design.",
       tech: ["React", "Vite", "Framer Motion", "Responsive Design"],
       link: "https://tedxpccoe-r.onrender.com/",
-      github: "https://github.com/Aditya25-github/TEDxPCCOE-R.git"
     },
   ];
 
@@ -137,17 +135,7 @@ export default function Projects() {
                   <i className="fas fa-globe"></i>
                   View Site
                 </motion.a>
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <i className="fab fa-github"></i>
-                  Code
-                </motion.a>
+                
               </div>
             </motion.div>
           ))}
