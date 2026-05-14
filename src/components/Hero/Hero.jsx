@@ -43,20 +43,10 @@ export default function Hero() {
     shine: {
       backgroundPosition: ["200% center", "-200% center"],
       transition: {
-        duration: 3,
+        duration: 4,
         repeat: Infinity,
         repeatType: "loop",
-      },
-    },
-  };
-
-  const scrollIndicatorVariants = {
-    animate: {
-      y: [0, 10, 0],
-      transition: {
-        duration: 2.5,
-        repeat: Infinity,
-        ease: "easeInOut",
+        ease: "linear",
       },
     },
   };
@@ -65,9 +55,10 @@ export default function Hero() {
     animate: {
       backgroundPosition: ["0% 0%", "100% 100%"],
       transition: {
-        duration: 20,
+        duration: 25,
         repeat: Infinity,
         repeatType: "reverse",
+        ease: "linear"
       },
     },
   };
@@ -90,15 +81,19 @@ export default function Hero() {
       animate="animate"
       id="home"
     >
+      {/* Decorative blurred blobs for the background */}
+      <div className="hero-blob hero-blob-1" />
+      <div className="hero-blob hero-blob-2" />
+
       <motion.div
-        className="hero-content"
+        className="hero-content glass-panel"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div variants={itemVariants} className="hero-greeting">
           <motion.span
-            className="greeting-text"
+            className="greeting-text text-gradient"
             variants={shineVariants}
             animate="shine"
           >
@@ -107,8 +102,8 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1 variants={nameVariants} className="hero-title">
-          Hi, I'm{" "}
-          <span className="hero-name">Akash Ajay Patil</span>
+          Hi, I'm <br />
+          <span className="hero-name text-gradient">Akash Ajay Patil</span>
         </motion.h1>
 
         <motion.div variants={itemVariants} className="hero-subtitle">
@@ -139,41 +134,16 @@ export default function Hero() {
         >
           <span className="tech-label">Tech Stack:</span>
           <div className="tech-icons">
-            <motion.span
-              className="tech-badge"
-              whileHover={{ scale: 1.1, y: -5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              React
-            </motion.span>
-            <motion.span
-              className="tech-badge"
-              whileHover={{ scale: 1.1, y: -5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              Node.js
-            </motion.span>
-            <motion.span
-              className="tech-badge"
-              whileHover={{ scale: 1.1, y: -5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              MongoDB
-            </motion.span>
-            <motion.span
-              className="tech-badge"
-              whileHover={{ scale: 1.1, y: -5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              JavaScript
-            </motion.span>
-            <motion.span
-              className="tech-badge"
-              whileHover={{ scale: 1.1, y: -5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              Responsive Design
-            </motion.span>
+            {["React", "Node.js", "MongoDB", "JavaScript", "Responsive Design"].map((tech) => (
+              <motion.span
+                key={tech}
+                className="tech-badge"
+                whileHover={{ scale: 1.1, y: -5, boxShadow: "0px 10px 20px rgba(255, 96, 0, 0.4)" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                {tech}
+              </motion.span>
+            ))}
           </div>
         </motion.div>
       </motion.div>

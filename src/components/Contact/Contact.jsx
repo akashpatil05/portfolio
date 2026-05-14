@@ -66,7 +66,7 @@ export default function Footer() {
     <footer className="footer" id="contact">
       <div className="footer-container">
         <motion.div
-          className="footer-content"
+          className="footer-content glass-panel"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -74,7 +74,7 @@ export default function Footer() {
         >
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="footer-section">
-            <h3 className="section-title">Get In Touch</h3>
+            <h3 className="section-title text-gradient">Get In Touch</h3>
             <div className="contact-links">
               {contactInfo.map((contact, index) => (
                 <motion.a
@@ -96,7 +96,7 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <motion.div variants={itemVariants} className="footer-section">
-            <h3 className="section-title">Follow Me</h3>
+            <h3 className="section-title text-gradient">Follow Me</h3>
             <motion.div
               className="social-links"
               variants={containerVariants}

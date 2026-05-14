@@ -55,7 +55,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="skills">
-      <div className="skills-container">
+      <div className="skills-container glass-panel">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="skills-title"
         >
-          Skills & <span className="highlight">Expertise</span>
+          Skills & <span className="highlight text-gradient">Expertise</span>
         </motion.h2>
 
         <motion.div

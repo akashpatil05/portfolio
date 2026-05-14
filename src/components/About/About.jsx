@@ -65,19 +65,19 @@ export default function About() {
   return (
     <section id="about" className="about">
       <motion.div
-        className="about-container"
+        className="about-container glass-panel"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.h2 variants={itemVariants} className="about-title">
-          About <span className="highlight">Me</span>
+          About <span className="highlight text-gradient">Me</span>
         </motion.h2>
 
         <motion.div variants={itemVariants} className="about-intro">
           <p className="about-description">
-            I'm a passionate <span className="accent">Frontend Developer</span> currently studying Computer Science & Engineering at PCCOE&R, Pune. Specializing in creating beautiful, responsive, and user-centric web interfaces with modern technologies. I focus on crafting seamless digital experiences through clean code and intuitive design.
+            I'm a passionate <span className="accent text-gradient">Frontend Developer</span> currently studying Computer Science & Engineering at PCCOE&R, Pune. Specializing in creating beautiful, responsive, and user-centric web interfaces with modern technologies. I focus on crafting seamless digital experiences through clean code and intuitive design.
           </p>
           <p className="about-location">
             <i className="fas fa-map-marker-alt location-icon"></i>
@@ -87,24 +87,24 @@ export default function About() {
 
         <motion.div variants={itemVariants} className="about-highlight">
           <div className="highlight-card">
-            <i className="fas fa-code card-icon"></i>
+            <i className="fas fa-code card-icon text-gradient"></i>
             <h3>What I Do</h3>
             <p>Build responsive web applications using React, Figma, and modern CSS. Focused on creating pixel-perfect UIs and engaging user experiences.</p>
           </div>
           <div className="highlight-card">
-            <i className="fas fa-bullseye card-icon"></i>
+            <i className="fas fa-bullseye card-icon text-gradient"></i>
             <h3>Current Focus</h3>
             <p>Mastering advanced React patterns, responsive design, animations, and frontend optimization for performance.</p>
           </div>
           <div className="highlight-card">
-            <i className="fas fa-lightbulb card-icon"></i>
+            <i className="fas fa-lightbulb card-icon text-gradient"></i>
             <h3>Passion</h3>
             <p>Turning design concepts into interactive, functional web applications. Continuous learner exploring emerging frontend technologies.</p>
           </div>
         </motion.div>
 
         <motion.h3 variants={itemVariants} className="education-title">
-          <i className="fas fa-book-open section-icon"></i>
+          <i className="fas fa-book-open section-icon text-gradient"></i>
           Education
         </motion.h3>
 
@@ -121,7 +121,7 @@ export default function About() {
                 </div>
                 <div className="education-meta">
                   <h4 className="institution-name">{edu.institution}</h4>
-                  <span className="education-type">{edu.type}</span>
+                  <span className="education-type text-gradient">{edu.type}</span>
                 </div>
               </div>
 

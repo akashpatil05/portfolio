@@ -56,7 +56,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="projects">
-      <div className="projects-container">
+      <div className="projects-container glass-panel">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="projects-title"
         >
-          Featured <span className="highlight">Projects</span>
+          Featured <span className="highlight text-gradient">Projects</span>
         </motion.h2>
 
         <motion.p
